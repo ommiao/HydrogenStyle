@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,16 +24,6 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/app_clock_widget_info" />
         </receiver>
-
-        <service
-            android:name=".service.ClockService"
-            android:enabled="true"
-            android:exported="true"
-            android:persistent="true">
-            <intent-filter android:priority="0x7fffffff">
-                <action android:name="ClockService"/>
-            </intent-filter>
-        </service>
 
         <activity
             android:name=".ui.activity.MainActivity"
